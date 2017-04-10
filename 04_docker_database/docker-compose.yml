@@ -1,0 +1,15 @@
+version: '2'
+services:
+  web:
+    build: ./web
+    ports:
+     - "8080:8080"
+    volumes:
+     - ./web/smartlabs:/home/flask/smartlabs
+  postgresql:
+    build: ./postgresql
+    volumes:
+     - postgresql_data:/var/lib/postgresql/9.3/main
+volumes:
+    postgresql_data:
+       external: true
