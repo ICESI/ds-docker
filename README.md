@@ -1,6 +1,6 @@
-#Distributed Systems www.icesi.edu.co/facultad_ingenieria/
+# Distributed Systems www.icesi.edu.co/facultad_ingenieria/
 
-#Docker Containers
+# Docker Containers
 
 ![][1]
 
