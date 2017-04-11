@@ -5,7 +5,7 @@
 
 This example allows developer to run the application in a development environment and a production
 environment without making any changes to the source code. This is done through environment variables of the
-operating system. In the following piece of code the application checks if SMARTLABS_SETTINGS environment 
+operating system. In the following piece of code the application checks if SMARTLABS_SETTINGS environment
 variable exist, if the variable do not exist, default settings at default_settings.py are employed.
 
 **__init__.py**
@@ -45,13 +45,13 @@ $ docker build -t flask_base .
 
 Create a postgresql container from base image. The container starts with the postgresql service activated
 ```sh
-$ docker run -p 5432:5432 --name postgresql_database postgresql_base 
+$ docker run -p 5432:5432 --name postgresql_database postgresql_base
 ```
 
 ### Create a schema and populate the database
 
 You must write down the ip of *docker0* interface and edit the file
-***web/flask_container/smartlabs/app/default_settings.py*** 
+***web/flask_container/smartlabs/app/default_settings.py***
 
 **default_settings.py**
 ```python
@@ -77,7 +77,7 @@ $ docker run --rm -it --name temporary_client --link postgresql_database:pg ubun
 # env
 ```
 
-From the output of the ***env*** command you can check that PG_PORT_5432_TCP_PORT and 
+From the output of the ***env*** command you can check that PG_PORT_5432_TCP_PORT and
 PG_PORT_5432_TCP_ADDR variables were created. You can type exit to leave the container and it will
 be self-destroyed due to the --rm docker parameter
 
@@ -105,7 +105,7 @@ export SMARTLABS_SETTINGS=production_settings.py
 
 When flask server starts, its relative path is inside app folder ***web/flask_container/smartlabs/app*** so it is expected that production_settings.py reside in this folder  
 
-Finally create a flask container linked with the previous created postregsql container. 
+Finally create a flask container linked with the previous created postregsql container.
 
 ```sh
 $ docker run -p 5000:5000 -d -e "SMARTLABS_SETTINGS=production_settings.py" --name flask_web --link postgresql_database:pg flask_base
