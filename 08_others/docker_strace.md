@@ -1,0 +1,1 @@
+Docker run requires additional flag for running strace "--security-opt seccomp:unconfined" starting v1.10 Ducatel/Visual-Studio-Linux-Build-Box#1
