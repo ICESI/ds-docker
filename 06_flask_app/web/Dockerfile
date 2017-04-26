@@ -25,6 +25,12 @@ WORKDIR /home/flask
 #Create virtualenvironment for flask
 RUN virtualenv flask_env
 
+#Copy source code into container
+ADD smartlabs /home/flask/smartlabs
+
+#Change directory
+WORKDIR /home/flask/smartlabs
+
 # #Activate virtualenvironment and install dependencies
 RUN . /home/flask/flask_env/bin/activate; pip install -r requirements.txt  
 
