@@ -13,6 +13,17 @@ La tecnología docker-compose permite el despliegue de ambientes conformados por
 
 ### Desarrollo
 
+#### Instalación 
+
+Siga los siguientes pasos para la instalación de docker-compose en Linux
+```
+$ sudo curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+```
+
+En el siguiente enlace encuentra mas información para la instalación de docker-compose
+https://docs.docker.com/compose/install/
+
 #### Comandos comunes
 
 | Comando   | Descripción   |
