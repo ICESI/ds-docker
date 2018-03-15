@@ -2,7 +2,7 @@
 docker pull networkboot/dhcpd
 mkdir data
 vi data/dhcpd.conf
-docker run -it --rm --net=host -v "$(pwd)/data":/data networkboot/dhcpd en01
+docker run -it --rm --net=host -v "$(pwd)/data":/data networkboot/dhcpd eno1
 ```
 
 ```
