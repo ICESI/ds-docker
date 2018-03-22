@@ -25,7 +25,17 @@ En este ejemplo se observa como el contenedor toma el entrypoint (directiva CMD)
 ```
 $ docker pull ubuntu
 $ docker run -it --name icesi_test ubuntu
-root@2a709bf13cda:/#
+root@2a709bf13cda:/# uname -S
+Linux
+root@2a709bf13cda:/# exit
+```
+
+El contenedor se detiene una vez se ejecuta el comando exit. Para eliminar el contenedor detenido haga lo
+siguiente:
+```
+$ docker ps -a | grep icesi_test
+d80ca057de18
+$ docker rm d80ca057de18
 ```
 
 En este ejemplo se observa como el contenido del volumen sobreescribe el contenido del contenedor,
@@ -34,6 +44,13 @@ y como el entrypoint del Dockerfile (directiva CMD) mantiene el microservicio ac
 $ vi Dockerfile
 $ docker build -t icesi_python .
 $ docker run --restart always -d -p 8080:8080 -v $PWD/sources:/tmp --name icesi-test icesi_python
+```
+
+Para forzar la eliminación de un contenedor que se encuentra en ejecución haga lo siguiente:
+```
+$ docker ps | grep icesi_test
+d80ca057de18
+$ docker rm -f d80ca057de18
 ```
 
 ### Parámetros
