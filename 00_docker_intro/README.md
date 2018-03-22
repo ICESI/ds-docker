@@ -3,7 +3,7 @@
 Universidad ICESI  
 Curso: Sistemas Distribuidos  
 Docente: Daniel Barragán C.  
-Tema: Introducción a la virtualización con contenedores virtuales
+Tema: Introducción a la virtualización con contenedores virtuales  
 Correo: daniel.barragan at correo.icesi.edu.co
 
 ### Objetivos
