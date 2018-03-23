@@ -1,8 +1,17 @@
-# Operating Systems www.icesi.edu.co/facultad_ingenieria/
+### Introducción a la virtualización con contenedores virtuales
 
-# Docker - Introduction to Dockerfiles
+Universidad ICESI  
+Curso: Sistemas Distribuidos  
+Docente: Daniel Barragán C.  
+Tema: Introducción a la virtualización con contenedores virtuales  
+Correo: daniel.barragan at correo.icesi.edu.co
 
-### Extracting sources.list 
+### Objetivos
+* Conocer la estructura básica de los archivos Dockerfile
+
+### Guía
+
+#### Extracting sources.list
 
 The following commands allow to extract the sources.list file from an ubuntu container
 
@@ -14,7 +23,7 @@ $ vi /mirror/sources.list
 :%s/archive.ubuntu.com/192.168.131.253
 ```
 
-### Build apache2 docker image
+#### Build apache2 docker image
 
 Use the following command to create apache2 image from Dockerfile
 
