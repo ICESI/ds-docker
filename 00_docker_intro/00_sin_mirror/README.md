@@ -13,7 +13,6 @@ Correo: daniel.barragan at correo.icesi.edu.co
 * Desplegar microservicios empleando contenedores virtuales
 
 ### Guía
-
 La imagen de alpine es una de las images con menor tamaño en docker hub, ideal para el despliegue de microservicios
 ```
 $ docker pull alpine
