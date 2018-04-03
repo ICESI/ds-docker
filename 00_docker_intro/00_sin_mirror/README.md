@@ -42,7 +42,7 @@ y como el entrypoint del Dockerfile (directiva CMD) mantiene el microservicio ac
 ```
 $ vi Dockerfile
 $ docker build -t icesi_web .
-$ docker run --restart always -d -p 8080:8080 -v $PWD/html:/var/www/html --name icesi_test icesi_web
+$ docker run --restart always -d -p 8080:80 -v $PWD/html:/var/www/html --name icesi_test icesi_web
 ```
 
 Para ingresar al contenedor en ejecución digite los siguientes comandos:
@@ -61,6 +61,18 @@ Para forzar la eliminación de un contenedor que se encuentra en ejecución haga
 $ docker ps | grep icesi_test
 d80ca057de18
 $ docker rm -f d80ca057de18
+```
+
+Una ópcion muy empleada con docker es la creación de volumenes. Emplee los siguientes
+comandos para crear un volumen y montar sus archivos en un contenedor
+```
+$ docker volume create html_files
+$ sudo su
+# cd /var/lib/docker/volumes/html_files/_data
+# wget www.icesi.edu.co
+# ls -l index.html
+# exit
+$ docker run -d -p 8080:80 -v html_files:/var/www/html --name icesi_test icesi_web
 ```
 
 ### Parámetros
