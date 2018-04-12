@@ -70,7 +70,7 @@ name: microservicios
 real name: microservices
 ```
 
-Actuliece las configuraciones y compruebe que el servidor DNS resuelve correctamente los dominios
+Actualice las configuraciones haciendo click en el boton actualizar (esquina superior derecha de la interfaz principal de BIND DNS Server)  y compruebe que el servidor DNS resuelve correctamente los dominios
 ```
 ➜  ~ host ns.icesi.edu.co 192.168.31.152
 Using domain server:
