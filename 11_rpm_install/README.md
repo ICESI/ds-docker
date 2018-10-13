@@ -54,5 +54,6 @@ CMD ["connexion", "run", "/usr/lib/python3.6/site-packages/gm_analytics/swagger/
 Simple test with container creation
 ```
 docker build -t icesi_service:0.1.0 .
-docker run -it --rm -p 5000:5000 icesi_service:0.1.0 
+docker run -d -p 5000:5000 --name icesi_service icesi_service:0.1.0
+docker logs icesi_service -f
 ```
