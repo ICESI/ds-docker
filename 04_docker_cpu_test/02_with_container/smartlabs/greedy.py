@@ -15,6 +15,7 @@ def hi():
 def test():
     t1=threading.Thread(target=greedy,args=[])
     t1.start()
+    return "OK"
 
 if __name__ == "__main__":
     app.run('0.0.0.0')
