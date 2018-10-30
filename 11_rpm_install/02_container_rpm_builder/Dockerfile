@@ -11,5 +11,7 @@ RUN python3.6 setup.py bdist_rpm --post-install="scripts/post_install_py3.sh" --
 WORKDIR /tmp/sd2018b-workshop2/dist
 RUN yum --nogpgcheck localinstall gm_analytics-*.noarch.rpm -y
 
-ENV GM_ANALYTICS=/usr/lib/python3.6/site-packages/gm_analytics/swagger/indexer.yaml
-CMD connexion run $GM_ANALYTICS
+#ENV GM_ANALYTICS=/usr/lib/python3.6/site-packages/gm_analytics/swagger/indexer.yaml
+#CMD connexion run $GM_ANALYTICS
+
+CMD connexion run $(find / -iname indexer.yaml | head -n 1) 
