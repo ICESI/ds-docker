@@ -19,13 +19,13 @@ services:
       - "24224:24224/udp"
 
   elasticsearch:
-    image: elasticsearch
+    image: elastic/elasticsearch:6.4.3
     expose:
       - 9200
     ports:
       - "9200:9200"
 
   kibana:
-    image: kibana
+    image: elastic/kibana:6.4.3
     ports:
       - "5601:5601"
