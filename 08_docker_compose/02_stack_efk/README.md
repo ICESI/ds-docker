@@ -10,6 +10,11 @@ Ejecutar el comando
 docker-compose up
 ```
 
+Sí realiza cambios a los archivos Dockerfile deberá desplegar el stack con el comando
+```
+docker-compose up --build
+```
+
 Verificar que todos los contenedores se encuentran activos
 ```
 docker ps
@@ -35,3 +40,9 @@ Kibana default username and password:
 username=elastic
 password=changeme
 ```
+
+### Referencias
+* https://docs.fluentd.org/v1.0/articles/quickstart
+* https://rubygems.org/gems/fluent-plugin-elasticsearch
+* https://hub.docker.com/r/fluent/fluentd/
+* https://github.com/cdcardenas/sd-exam3

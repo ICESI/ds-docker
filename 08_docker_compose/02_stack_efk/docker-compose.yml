@@ -1,4 +1,4 @@
-version: '3'
+version: '3.3'
 services:
   web:
     image: httpd
@@ -9,6 +9,14 @@ services:
       options:
         fluentd-address: localhost:24224
         tag: httpd.access
+    deploy:
+      resources:
+        limits:
+          cpus: '0.10'
+          memory: 20M
+        reservations:
+          cpus: '0.05'
+          memory: 10M
 
   fluentd:
     build: ./fluentd
