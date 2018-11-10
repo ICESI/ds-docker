@@ -20,6 +20,14 @@ Verificar que todos los contenedores se encuentran activos
 docker ps
 ```
 
+Genere tráfico hacia la aplicación empleando los siguientes comandos:
+```
+watch -n 1 curl 127.0.0.1/nonexist -X PUT -d '{}'
+watch -n 1 curl 127.0.0.1/nonexist -X DELETE
+watch -n 1 curl 127.0.0.1 -X GET
+watch -n 1 curl 127.0.0.1/nonexist -X POST -d '{}'
+```
+
 ### Notas
 
 El archivo jvm.options mantiene un limite para la memoria que se puede asignar a elasticsearch
