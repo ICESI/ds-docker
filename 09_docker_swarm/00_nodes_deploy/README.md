@@ -37,6 +37,11 @@ Despliegue los detalles de un servicio
 docker service inspect --pretty <SERVICE-ID>
 ```
 
+Observe los logs del servicio
+```
+docker service logs <SERVICE-ID> -f
+```
+
 Observe los nodos que estan ejecutando el servicio
 ```
 docker service ps <SERVICE-ID>
