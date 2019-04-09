@@ -49,7 +49,7 @@ docker service scale <SERVICE-ID>=<NUMBER-OF-TASKS>
 
 Observe los cambios
 ```
-docker service ps
+docker service ps <SERVICE-ID>
 ```
 
 Desactive uno de los nodos
