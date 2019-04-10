@@ -87,6 +87,19 @@ Elimine el servicio
 docker service rm <SERVICE-ID>
 ```
 
+## Service discovery
+
+Crea la siguiente tarea en el swarm
+```
+docker service create --name lbapp1 --replicas 2 -p 81:80 katacoda/docker-http-server
+```
+
+Realice peticiones
+```
+curl docker:81
+```
+
 # Referencias
-https://docs.docker.com/engine/swarm/swarm-tutorial/rolling-update/
+* https://docs.docker.com/engine/swarm/swarm-tutorial/rolling-update/
+* https://www.katacoda.com/courses/docker-orchestration/load-balance-service-discovery-swarm-mode
 
