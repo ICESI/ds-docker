@@ -119,4 +119,5 @@ docker network ls
 # Referencias
 * https://docs.docker.com/engine/swarm/swarm-tutorial/rolling-update/
 * https://www.katacoda.com/courses/docker-orchestration/load-balance-service-discovery-swarm-mode
+* https://training.play-with-docker.com/swarm-service-discovery/
 
