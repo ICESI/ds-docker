@@ -99,6 +99,23 @@ Realice peticiones
 curl docker:81
 ```
 
+Escale el cluster
+```
+docker service scale lbapp1=3
+```
+
+Listar los servicios del swarm
+```
+docker service ls
+```
+
+## Networks
+
+Liste las redes del swarm
+```
+docker network ls
+```
+
 # Referencias
 * https://docs.docker.com/engine/swarm/swarm-tutorial/rolling-update/
 * https://www.katacoda.com/courses/docker-orchestration/load-balance-service-discovery-swarm-mode
