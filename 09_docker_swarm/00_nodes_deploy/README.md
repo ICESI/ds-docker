@@ -52,7 +52,7 @@ Actualice la cantidad de replicas del servicio
 docker service scale <SERVICE-ID>=<NUMBER-OF-TASKS>
 ```
 
-Observe los cambios
+Observe los cambios, note los nodos en los que se esta ejecutando el servicio
 ```
 docker service ps <SERVICE-ID>
 ```
