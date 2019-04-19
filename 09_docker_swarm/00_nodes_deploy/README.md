@@ -1,6 +1,12 @@
 # Guia
 
-Obtener en el nodo maestro el comando para adicionar un nuevo nodo al swarm
+En el nodo maestro inicializar el cluster de docker swarm
+```
+ip=$(hostname -I | awk '{print $2}')
+docker swarm init --advertise-addr $ip
+```
+
+Obtener en el nodo maestro el comando para adicionar un nuevo nodo al swarm (este comando tambien se obtiene al ejecutar el comando para inicializar el cluster)
 ```
 docker swarm join-token worker
 ```
@@ -121,4 +127,3 @@ docker network ls
 * https://www.katacoda.com/courses/docker-orchestration/load-balance-service-discovery-swarm-mode
 * https://training.play-with-docker.com/swarm-service-discovery/
 * https://docs.docker.com/engine/swarm/ingress/
-
